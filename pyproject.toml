@@ -91,8 +91,8 @@ packages = ["sam3",
             "sam3.train.data", 
             "sam3.train.loss", 
             "sam3.model.utils",
-            "sam3.perflib", 
-            "assets"]
+            "sam3.perflib",
+            "sam3.perflib.triton",]
 
 [tool.setuptools.dynamic]
 version = {attr = "sam3.__version__"}
