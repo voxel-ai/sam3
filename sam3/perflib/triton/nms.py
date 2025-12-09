@@ -67,7 +67,7 @@ def _nms_suppression_kernel(
                     mask=target_box_mask,
                     other=False,
                 )
-                suppression_mask = tl.cast(suppression_mask, tl.int1)
+                suppression_mask = suppression_mask.to(tl.int1)
 
                 # Conditionally store suppression result for high-IoU boxes
                 tl.store(
